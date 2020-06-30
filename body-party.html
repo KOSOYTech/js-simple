@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<script>
+           window.onload = function() {
+              function changeColor() {
+              	var body = document.getElementsByTagName('body')[0];
+             
+              	// Генерируем случайное значение для каждого пункта цвета RGB
+			  	var colorRed = Math.random() * 255;
+              	var colorGreen = Math.random() * 255;
+              	var colorBlue = Math.random() * 255;
+              	var color = `rgb(${colorRed},${colorGreen},${colorBlue})`;
+   
+		      	body.style.background = color;
+              }
+              changeColor();
+              // Меняем цвет каждые 5 секунд
+              setInterval(changeColor, 5000);
+		   };
+        </script>
+	</body>
+</html>
